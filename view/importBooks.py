@@ -51,8 +51,8 @@ def importBook():
                 db.session.add(book)
             db.session.commit()
 
-            return jsonify({'message': f'{num_books} books imported successfully!{book_data}'})
+            return jsonify({'message': 'Books imported successfully!'})
         else:
-            return jsonify({'message':'Failed to import books. Error:'})
+            return jsonify({'message':'Failed to import books.'})
     else:
         return render_template('importBookHTML/importBook.html')
