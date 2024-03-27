@@ -1,0 +1,11 @@
+/* .container{
+    background-image: url("/static/images/pexels-element-digital-1370296.jpg");
+} */
+
+.custom-body{
+    background-color: rgb(227, 255, 231);
+}
+
+.bg-warning{
+    background-color: rgb(96, 221, 204);
+}

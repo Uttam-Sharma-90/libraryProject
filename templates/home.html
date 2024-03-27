@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}LMS Home{% endblock %}
+
+{% block head %}
+    <!-- extends parent class prop in this class with addition to prop given -->
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="container my-5">
+        <div class="row px-5 py-3">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center h1">Welcome to Our Library Management System</h1>
+                <p class="lead text-center">Manage your library with ease!</p>
+    
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Books
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/importBooks">Import Books</a></li>
+                    <li><a class="dropdown-item" href="/createBooks">Create Book</a></li>
+                    <li><a class="dropdown-item" href="/viewBooks">Show all Books</a></li>
+                    <li><a class="dropdown-item" href="/updateBook">Update Book</a></li>
+                    <li><a class="dropdown-item" href="/deleteBook">Delete Book</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Members
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/register">Register Member</a></li>
+                    <li><a class="dropdown-item" href="/viewMember">Show all Members</a></li>
+                    <li><a class="dropdown-item" href="/updateMember">Update Member</a></li>
+                    <li><a class="dropdown-item" href="/deleteMember">Delete Member</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Transactions
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/issue_book">Issue Book</a></li>
+                        <li><a class="dropdown-item" href="/return_book">Return Book</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Delete all
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/delete_all_books">Delete all books</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

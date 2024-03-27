@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Book in Stock{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet"href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <h3 class="text-center">Search Result for book - {{search_term}}</h3>
+        {% if books %}
+        <ul class="lead text-center">
+            {% for book in books %}
+                <li class="lead text-center">{{ book.title }} by {{ book.authors }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p class="lead text-center">No such books found for "{{ search_term }}"</p>
+        {% endif %}
+    </div>
+
+{% endblock %}

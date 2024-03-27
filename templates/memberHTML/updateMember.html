@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Update Member{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+<div class="container my-3">
+      {% if members %}
+        <h2>Update Member record</h2>
+        <form method="post" id="updateForm">
+            <input type="hidden" name="member_id" value="{{ member_id }}"> 
+
+            <div class="mb-3">
+                <label for="name" class="form-label">New Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ members.name }}">
+            </div>
+            <div class="mb-3">
+                <label for="email_id" class="form-label">New Email Id</label>
+                <input type="email" class="form-control" id="email_id" name="email_id" value="{{ members.email_id }}">
+            </div>
+            <div class="mb-3">
+                <label for="mobile_no" class="form-label">New Mobile no.</label>
+                <input type="number" class="form-control" id="mobile_no" name="mobile_no" value="{{ members.mobile_no }}">
+            </div>
+            <div class="mb-3">
+                <label for="memberShip_id" class="form-label">New Membership Id</label>
+                <input type="number" class="form-control" id="memberShip_id" name="memberShip_id" value="{{ members.memberShip_id }}">
+            </div>
+            <div>
+                <input type="checkbox" id="isMember" name="isMember" {% if members.isMember %} checked {% endif %}>
+                <label for="isMember">Is Member</label><br><br>
+                <input type="hidden" name="isMember_old" value="{{ 'on' if members.isMember else 'off' }}">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Update">Submit</button>
+        </form>
+        {% endif %}
+    </div>
+{% endblock %}

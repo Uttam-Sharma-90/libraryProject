@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Create Book{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-4">
+    <form method="post">
+      <div class="mb-3">
+        <label for="isbn" class="form-label">ISBN</label>
+        <input type="text" class="form-control" id="isbn" name="isbn">
+      </div>
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title">
+      </div>
+      <div class="mb-3">
+        <label for="authors" class="form-label">Authors</label>
+        <input type="text" class="form-control" id="authors" name="authors">
+      </div>
+      <div class="mb-3">
+        <label for="publisher" class="form-label">Publisher</label>
+        <input type="text" class="form-control" id="publisher" name="publisher">
+      </div>
+      <div class="mb-3">
+        <label for="pages" class="form-label">Pages</label>
+        <input type="number" class="form-control" id="pages" name="pages">
+      </div>
+      <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+{% endblock %}

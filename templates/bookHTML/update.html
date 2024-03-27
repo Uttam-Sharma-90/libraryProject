@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Update Book{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+<div class="container my-3">
+      {% if books %}
+        <h2>Update books record</h2>
+        <form method="post" id="updateForm">
+          <input type="hidden" name="book_id" value="{{ book_id }}"> 
+            <div class="mb-3">
+                <label for="isbn" class="form-label">ISBN</label>
+                <input type="text" class="form-control" id="isbn" name="isbn" value="{{ books.isbn }}">
+              </div>
+              <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{ books.title }}">
+              </div>
+              <div class="mb-3">
+                <label for="authors" class="form-label">Authors</label>
+                <input type="text" class="form-control" id="authors" name="authors" value="{{ books.authors }}">
+              </div>
+              <div class="mb-3">
+                <label for="publisher" class="form-label">Publisher</label>
+                <input type="text" class="form-control" id="publisher" name="publisher" value="{{ books.publisher }}">
+              </div>
+              <div class="mb-3">
+                <label for="pages" class="form-label">Pages</label>
+                <input type="number" class="form-control" id="pages" name="pages" value="{{ books.pages }}">
+              </div>
+              <button type="submit" class="btn btn-primary" value="Update">Submit</button>
+        </form>
+        {% endif %}
+    </div>
+{% endblock %}

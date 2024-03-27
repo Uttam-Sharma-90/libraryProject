@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Book Issue{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+    <div class="container my-4">
+        <h3>Issue Book</h3>
+        <form method="post">
+            <div class="mb-3">
+                <label for="book_id" class="form-label">Book Id</label>
+                <input type="number" class="form-control" id="book_id" name="book_id" required>
+            </div>
+            <div class="mb-3">
+                <label for="member_id" class="form-label">Member Id</label>
+                <input type="number" class="form-control" id="member_id" name="member_id" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Issue Book</button>
+        </form>
+    </div>
+{% endblock %}

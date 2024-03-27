@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Search Member{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+
+    <h1>Search for Member Id</h1>
+    <form method="post">
+        <input type="number" id="member_id" name="member_id" placeholder="Enter Member id">
+        <button type="submit">Check</button>
+    </form>
+{% endblock %}

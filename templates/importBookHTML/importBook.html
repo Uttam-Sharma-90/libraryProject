@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Import Book{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+    <div class="container my-3">
+        <h1>Import Books</h1>
+        <form action="/importBooks" method="post">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title">
+            </div>
+            <div class="mb-3">
+                <label for="num_books" class="form-label">Number of Books to Import</label>
+                <input type="number" class="form-control" id="num_books" name="num_books">
+            </div>
+            <input type="submit" value="Import Books">
+        </form>
+    </div>
+{% endblock %}

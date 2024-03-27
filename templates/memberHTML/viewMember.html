@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}All Members{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+    <div class="container my-4">
+      <h2>All registered members</h2>
+      <table class="table my-3">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">ID</th>
+              <th scope="col">NAME</th>
+              <th scope="col">EMAIL ID</th>
+              <th scope="col">MOBILE NO</th>
+              <th scope="col">IS MEMBER</th>
+              <th scope="col">MEMBERSHIP ID</th>
+            </tr>
+          </thead>
+          <tbody>
+                    <!-- jinja2 syntax -->
+              {% for mem in all_members %}
+              <tr>
+              <th scope="row"></th>
+              <td>{{mem.id}}</td>
+              <td>{{mem.name}}</td>
+              <td>{{mem.email_id}}</td>
+              <td>{{mem.mobile_no}}</td>
+              <td>{{mem.isMember}}</td>
+              <td>{{mem.memberShip_id}}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+    </div>
+{% endblock %}

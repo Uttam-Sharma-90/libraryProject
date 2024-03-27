@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Search Book{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+
+    <h1>Search for Books</h1>
+    <form method="post">
+        <input type="text" name="search_term" placeholder="Enter book title or author">
+        <button type="submit">Search</button>
+    </form>
+{% endblock %}

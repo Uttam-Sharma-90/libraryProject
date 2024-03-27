@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Search Book{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1>Search for Book Id</h1>
+        <form method="post">
+            <!-- <input type="number" id="book_id" name="book_id" placeholder="Enter book id"> -->
+            <div class="mb-3 form-label">
+                <input type="number" class="form-control" id="book_id" name="book_id" placeholder="Enter book id" min="1">
+            </div>
+            <button type="submit" class="btn btn-primary">Check</button>
+        </form>
+    </div>
+{% endblock %}

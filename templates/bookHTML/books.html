@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}All Books{% endblock %}
+
+{% block head %}
+    {{ super() }} 
+    <link rel="stylesheet" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+  <div class="container my-3">
+      <h2>Books in stock</h2>
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">ID</th>
+              <th scope="col">ISBN</th>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Publisher</th>
+              <th scope="col">Pages</th>
+              <th scope="col">Is issued</th>
+            </tr>
+          </thead>
+          <tbody>
+              <!-- jinja2 syntax -->
+              {% for book in all_book %}
+              <tr>
+              <th scope="row"></th>
+              <td>{{book.id}}</td>
+              <td>{{book.isbn}}</td>
+              <td>{{book.title}}</td>
+              <td>{{book.authors}}</td>
+              <td>{{book.publisher}}</td>
+              <td>{{book.pages}}</td>
+              <td>{{book.is_issued}}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+  </div>
+{% endblock %}
