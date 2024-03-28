@@ -16,7 +16,7 @@ Features:
   </p>
 * book dropdown features
   <p align="center">
-   <img src=book_.png>
+   <img src=static\images\book_.png>
   </p>
 * member dropdown features
   <p align="center">
