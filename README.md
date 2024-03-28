@@ -32,7 +32,8 @@ This project aims to create a Library Management System to efficiently manage bo
 - **Debt Limit:** Ensure that a member's outstanding debt does not exceed Rs.500.
 
 
-### ScreenShots
+
+### Screenshots
 * Home page
   <p align="center">
    <img src=static\images\image.png>
@@ -53,19 +54,33 @@ This project aims to create a Library Management System to efficiently manage bo
   <p align="center">
    <img src=static\images\import_book.png>
   </p>
-* register member
+* create books
   <p align="center">
-   <img src=static\images\member_register.png>
-  </p>
-* Issue a book 
-  <p align="center">
-   <img src=static\images\book_issue.png>
+   <img src=static\images\create_book.png>
   </p>
 * book record
   <p align="center">
    <img src=static\images\book_record.png>
   </p>
+* register member
+  <p align="center">
+   <img src=static\images\member_register.png>
+  </p>
+* all member
+  <p align="center">
+   <img src=static\images\all_membrs.png>
+  </p>
 * update member or book record
   <p align="center">
    <img src=static\images\update.png>
   </p>
+* Issue a book 
+  <p align="center">
+   <img src=static\images\book_issue.png>
+  </p>
+* Return a book 
+  <p align="center">
+   <img src=static\images\return_book.png>
+  </p>
+
+
