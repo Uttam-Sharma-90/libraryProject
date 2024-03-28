@@ -1,15 +1,39 @@
-This is a library management system developed using flask and SQLlite database.
+# My Library Management System
 
-Features:
-    Perform general CRUD operations on Books and Members.
-    Issue a book to a member
-    Issue a book return from a member
-    Search for a book by name and author
-    Charge a rent fee on book returns
-    Member’s outstanding debt is not more than Rs.500
-    Import book 
+## Introduction
 
-### Features
+This project aims to create a Library Management System to efficiently manage books and members developed using flask and SQLlite database.
+
+## Features
+
+### General CRUD Operations on Books and Members
+
+- **Create:** Add a new book/Member to the library inventory.
+- **Read:** Retrieve information about a book/Member.
+- **Update:** Modify information about a book/Member.
+- **Delete:** Remove a book//Member from the inventory.
+  
+### Issuing and Returning Books
+
+- **Issue a Book to a Member:** Assign a book from the library inventory to a registered member.
+- **Return a Book from a Member:** Mark a book returned by a member.
+
+### Searching for Books
+
+- **Search by Name:** Find a book in the inventory by its name.
+- **Search by Author:** Find books in the inventory by a specific author.
+
+### Rent Fee Charging
+
+- **Charge Rent Fee:** Apply a rent fee when a book is returned late.
+
+### Debt Limit for Members
+
+- **Debt Limit:** Ensure that a member's outstanding debt does not exceed Rs.500.
+
+
+
+### Screenshots
 * Home page
   <p align="center">
    <img src=static\images\image.png>
