@@ -30,19 +30,33 @@ Features:
   <p align="center">
    <img src=static\images\import_book.png>
   </p>
-* register member
+* create books
   <p align="center">
-   <img src=static\images\member_register.png>
-  </p>
-* Issue a book 
-  <p align="center">
-   <img src=static\images\book_issue.png>
+   <img src=static\images\create_book.png>
   </p>
 * book record
   <p align="center">
    <img src=static\images\book_record.png>
   </p>
+* register member
+  <p align="center">
+   <img src=static\images\member_register.png>
+  </p>
+* all member
+  <p align="center">
+   <img src=static\images\all_membrs.png>
+  </p>
 * update member or book record
   <p align="center">
    <img src=static\images\update.png>
   </p>
+* Issue a book 
+  <p align="center">
+   <img src=static\images\book_issue.png>
+  </p>
+* Return a book 
+  <p align="center">
+   <img src=static\images\return_book.png>
+  </p>
+
+
